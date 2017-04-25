@@ -1,0 +1,46 @@
+.comp-pms-header {
+    @height: 50px;
+    width: 100%;
+    height: @height;
+    margin-bottom: 20px;
+    position: relative;
+
+    .floating {
+        position: fixed;
+        top: 0;
+        z-index: 100;
+        background-color: #f6f6f6;
+        border-bottom: 1px solid #DDD;
+        width: @page-max-width;
+        height: @height;
+        .box-shadow(1px 5px 5px rgba(255, 255, 255, 1));
+
+        .common {
+            float: left;
+            width: 20%;
+            height: @height;
+            align-items: center;
+            display: flex;
+            align-items: center;
+            justify-content: flex-start;
+        }
+
+        .left {
+            width: 20%;
+            padding-left: 20px;
+        }
+
+        .center {
+            width: 60%;
+            justify-content: center;
+            font-size: 22px;
+            font-weight: bold;
+            //color: #555;
+        }
+
+        .right {
+            justify-content: flex-end;
+            padding-right: 20px;
+        }
+    }
+}

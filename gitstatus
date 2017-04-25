@@ -1,0 +1,8 @@
+#!/bin/bash
+git status -s \
+    | grep -v .idea \
+    | grep -v .DS_Store \
+    | grep -v gitstatus \
+    | grep -v bower_components \
+    | grep -v node_modules \
+    | grep -v build-dev

@@ -1,0 +1,19 @@
+<div class="comp-date-picker unselectable">
+    <div class="year-month">
+        <div ng-class="previousClass" ng-click="onNext(-1)">
+            <span class="glyphicon glyphicon-menu-left"></span>
+        </div>
+        <div class="text">{{data.yearMonthText}}</div>
+        <div ng-class="nextClass" ng-click="onNext(1)">
+            <span class="glyphicon glyphicon-menu-right"></span>
+        </div>
+    </div>
+
+    <div class="week">
+        <div class="cell" ng-repeat="wd in data.weekDays">{{wd}}</div>
+    </div>
+
+    <div class="days">
+        <div ng-class="day.cssClass" ng-repeat="day in data.days track by $index" ng-click="onDate(day)">{{day.text}}</div>
+    </div>
+</div>

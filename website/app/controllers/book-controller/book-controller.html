@@ -1,0 +1,66 @@
+<div class="book-controller">
+    <pms-header>
+        <left><span class="icon-home glyphicon glyphicon-home" ng-click="Global.home()"></span><br></left>
+        <center>{{data.section}} Book</center>
+    </pms-header>
+
+    <div class="filter">
+        <search-text ng-model="data.filter"></search-text>
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active nav-styles" ng-click="onTab('nav-styles')"><a href="">Styles</a></li>
+        <li role="presentation" class="nav-detail" ng-click="onTab('nav-detail')"><a href="">Styles Detail</a></li>
+        <li role="presentation" class="nav-closed" ng-click="onTab('nav-closed')"><a href="">Closed Styles</a></li>
+    </ul>
+
+    <!-- styles -->
+    <div class="tab-view-cont" ng-show="data.tabViewMode == 'nav-styles'">
+        <div ng-class="e.cssClass" ng-repeat="e in getOrders() track by $index" ng-click="onStyle(e)">
+            {{e.style}}
+        </div>
+    </div>
+
+    <!-- styles detail (opened and closed) -->
+    <div class="orders" ng-show="data.tabViewMode != 'nav-styles'">
+        <table class="pms-table order-table">
+            <tr class="pms-table-header">
+                <td class="pms-cd">cd</td>
+                <td>Buyer</td>
+                <td>Style</td>
+                <td>Qty</td>
+                <td>Create date</td>
+                <td>Remark</td>
+                <td class="pms-menu-button-cont">&nbsp;</td>
+            </tr>
+
+            <!-- Data from tran_order -->
+            <tr class="pms-table-row {{e.cssClass}}" ng-repeat="e in getOrders() track by $index">
+                <td class="pms-cd">{{e.cd}}</td>
+                <td class="_buyer">{{e.buyer}}</td>
+                <td class="_style">{{e.style}}</td>
+                <td class="_qty">{{e.qty}}</td>
+                <td class="_create_date">{{e.create_date}}</td>
+                <td class="_remark">{{e.remark}}</td>
+                <td class="pms-menu-button-cont">
+                    <div class="pms-menu-button fa fa-check" ng-click="onSelect($event)" title="Select"></div>
+                </td>
+            </tr>
+        </table>
+    </div>
+
+    <!-- book table -->
+    <div class="book" ng-show="data.tabViewMode == 'nav-styles'" expand-to-bottom>
+        <div class="info">
+            <div class="id-no">
+                <span class="id-no-label">ID No: </span>
+                <input type="text" class="id-no-input"/>
+                <span class="id-no-info">range 1-750</span>
+            </div>
+        </div>
+        <div class="data">
+
+        </div>
+    </div>
+
+</div>

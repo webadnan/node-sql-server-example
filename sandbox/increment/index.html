@@ -1,0 +1,61 @@
+<html>
+<head>
+    <title>Increment Console</title>
+    <script src="jquery.min.js"></script>
+    <script src="xlsx.core.min.js"></script>
+
+    <script>
+        function parse(w){
+            var sheetName = w.SheetNames[0],
+                    sheet = w.Sheets[sheetName],
+                    rows = sheet['!range'].e.r,
+                    cols = sheet['!range'].e.c;
+
+            console.log('rows, cols', rows, cols);
+            console.log(w);
+
+            var tuples = [];
+            for (var i=0;i<rows;i++){
+                var tuple = {};
+                for (var j=0;j<cols;j++){
+                    var cell = String.fromCharCode(65 + j) + (i+1);
+                    var colName = w.Strings[j].r;
+                    var val = sheet[cell] && sheet[cell].w ? sheet[cell].w : '';
+                    tuple[colName] = val;
+                }
+                tuples.push(tuple);
+            }
+            console.log(tuples);
+        }
+        function handleFile(e) {
+            var files = e.target.files;
+            var i, f;
+            for (i = 0, f = files[i]; i != files.length; ++i) {
+                var reader = new FileReader();
+                var name = f.name;
+                reader.onload = function (e) {
+                    var data = e.target.result;
+
+                    var workbook = XLSX.read(data, {type: 'binary'});
+                    parse(workbook);
+
+                    /* DO SOMETHING WITH workbook HERE */
+                };
+                reader.readAsBinaryString(f);
+            }
+        }
+
+        $(function(){
+            var fileSelector = document.getElementById('xls-file-selector');
+            fileSelector.addEventListener('change', handleFile, false);
+        });
+    </script>
+</head>
+
+<body>
+
+<input type="file" id="xls-file-selector"/>
+
+</body>
+
+</html>

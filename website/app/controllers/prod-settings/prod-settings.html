@@ -1,0 +1,103 @@
+<div class="prod-settings">
+    <pms-header>
+        <left><span class="icon-home glyphicon glyphicon-home" ng-click="Global.home()"></span><br></left>
+        <center>{{data.section}} Settings</center>
+    </pms-header>
+
+    <div class="filter">
+        <search-text ng-model="data.filter"></search-text>
+    </div>
+
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active nav-opened" ng-click="showOpened()"><a href="">Opened styles</a></li>
+        <li role="presentation" class="nav-closed" ng-click="showClosed()"><a href="">Closed styles</a></li>
+        <li role="presentation" class="nav-edit" ng-show="data.showDetail" ng-click="showEdit()"><a href="">{{data.editTitle}}</a></li>
+    </ul>
+
+    <div class="form">
+        <div class="orders">
+            <table class="pms-table order-table" ng-show="data.displayOrders">
+                <tr class="pms-table-header">
+                    <td class="pms-cd">cd</td>
+                    <td>Buyer</td>
+                    <td>Style</td>
+                    <td>Qty</td>
+                    <td>Create date</td>
+                    <td>Remark</td>
+                    <td class="pms-menu-button-cont">&nbsp;</td>
+                </tr>
+
+                <!-- Add new order -->
+                <tr class="pms-table-row pms-new-row" ng-show="data.viewMode == 'open'">
+                    <td class="pms-cd">-</td>
+                    <td class="new_buyer" inline-edit="onNewBuyer(event)" combo-type="buyer" next-focus="1" selected-item="data.newOrder.buyer" ng-placeholder="+"></td>
+                    <td class="new_style" inline-edit="onNewStyle(event)" combo-type="style" next-focus="1" selected-item="data.newOrder.style" ng-placeholder="+"></td>
+                    <td class="new_qty" inline-edit="onNewQty(event)" next-focus="1" ng-model="data.newOrder.qty" ng-placeholder="+"></td>
+                    <td class="new_create_date" inline-edit="onNewDate(event)" combo-type="date" next-focus="1" ng-model="data.newOrder.create_date" ng-placeholder="+"></td>
+                    <td class="new_remark" inline-edit="onNewRemark(event)" ng-model="data.newOrder.remark" ng-placeholder="+"></td>
+                    <td class="pms-menu-button-cont">
+                        <div class="pms-menu-button fa fa-plus" ng-click="onOrderAdd($event)"></div>
+                    </td>
+                </tr>
+
+                <!-- Data from tran_order -->
+                <tr class="pms-table-row cd-{{e.cd}}" ng-repeat="e in data.displayOrders | filterOrders:data.filter track by $index">
+                    <td class="pms-cd">{{e.cd}}</td>
+                    <td class="_buyer" inline-edit="onBuyer(event)" combo-type="buyer">{{e.buyer}}</td>
+                    <td class="_style" inline-edit="onStyle(event)" combo-type="style">{{e.style}}</td>
+                    <td class="_qty" inline-edit="onQty(event)">{{e.qty}}</td>
+                    <td class="_create_date" inline-edit="onDate(event)" combo-type="date">{{e.create_date}}</td>
+                    <td class="_remark" inline-edit="onRemark(event)">{{e.remark}}</td>
+                    <td class="pms-menu-button-cont">
+                        <div class="pms-menu-button fa fa-pencil" ng-click="onEdit($event)"></div>
+                        <div class="pms-menu-button fa fa-ellipsis-v" ng-click="onMenu($event)"></div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+
+        <div class="detail" ng-if="data.showDetail">
+            <div class="rates">
+                <div class="section" ng-repeat="section in pms.prod_sections">
+                    <div class="title">{{section}} RATES</div>
+                    <table class="pms-table rate-table">
+                        <tr class="pms-table-header">
+                            <td>Rate name</td>
+                            <td>Target</td>
+                            <td class="_rate_value">Value</td>
+                            <td>&nbsp;</td>
+                        </tr>
+
+                        <!-- Data from tran_order_rate -->
+                        <tr class="pms-table-row" ng-repeat="rate in data.sectionDetail[section]">
+                            <td inline-edit="onRate(event)" combo-type="rate">{{rate.rate_name}}</td>
+                            <td><input type="checkbox" ng-model="rate.rate_target" ng-click="onTarget($event)"/></td>
+                            <td class="_rate_value" inline-edit="onRateValue(event)">{{rate.rate_value}}</td>
+                            <td class="pms-menu-button-cont"><div class="pms-menu-button fa fa-trash-o" title="Delete" ng-click="onDelete($event)"></div></td>
+                        </tr>
+
+                        <!-- Add new tran_order_rate -->
+                        <tr class="pms-table-row pms-new-row">
+                            <td class="new_rate_name"
+                                section="{{section}}"
+                                ng-model="data.input[section].newRateName"
+                                ng-bind="data.input[section].newRateName"
+                                inline-edit="onNewRate(event)"
+                                combo-type="rate" ng-placeholder="+"></td>
+                            <td><input type="checkbox" ng-model="data.input[section].newTarget"/></td>
+                            <td class="_rate_value"
+                                ng-model="data.input[section].newRateValue"
+                                ng-bind="data.input[section].newRateValue"
+                                inline-edit=""
+                                ng-placeholder="+"></td>
+                            <td class="pms-menu-button-cont"><div class="pms-menu-button fa fa-plus" title="Add" ng-click="onAdd($event)"></div></td>
+                        </tr>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="pms-spinner fa fa-spinner fa-spin" ng-if="data.wait"></div>
+
+</div>

@@ -1,0 +1,70 @@
+.prod-settings {
+    position: relative;
+
+    .filter {
+        position: absolute;
+        width: 150px;
+        height: 25px;
+        left: calc(~'100% - ' 150px);
+    }
+
+    .form {
+        margin-top: 20px;
+
+        .orders {
+            .order-table {
+                width: 100%;
+                .pms-menu-button-cont {
+                    width: 60px;
+                }
+            }
+        }
+
+        .detail {
+            //border-top: 1px solid rgba(238, 238, 238, 1);
+            //padding-top: 30px;
+            margin-top: 60px;
+            .rates {
+                display: flex;
+                flex-wrap: wrap;
+                .section {
+                    padding-bottom: 30px;
+                    width: 50%;
+                    .rate-table {
+                        .pms-table-header {
+                            height: 30px;
+                        }
+                        .pms-table-row {
+                            .add {
+                                cursor: pointer;
+                                text-align: right;
+                            }
+                        }
+
+                        ._rate_value {
+                            text-align: right;
+                            max-width: 70px;
+                            input {
+                                text-align: right;
+                            }
+                        }
+
+                        input {
+                            width: 100%;
+                        }
+
+                        .new_rate_name span{
+                            color: #999;
+                        }
+                    }
+                }
+                .section:nth-child(odd) {
+                    padding-right: 10px;
+                }
+                .section:nth-child(even) {
+                    padding-left: 10px;
+                }
+            }
+        }
+    }
+}

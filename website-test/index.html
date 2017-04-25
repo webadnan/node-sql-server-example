@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test</title>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <!-- Will not include theme, plain is simple :) -->
+    <!--<link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap-theme.min.css">-->
+    <link rel="stylesheet" type="text/css" href="bower_components/Font-Awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="build/styles.css"/>
+    <script type="text/javascript">
+        var _UUID_ = +'1439103585324';
+
+        function loadCss(url) {
+            var link = document.createElement("link");
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            link.href = url;
+            document.getElementsByTagName("head")[0].appendChild(link);
+        }
+    </script>
+</head>
+
+<body>
+
+<div ng-view></div>
+<div class="dialog-container-100"></div>
+<div class="black-overlay"></div>
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="bower_components/lodash/dist/lodash.min.js"></script>
+<script type="text/javascript" src="vendor_components/require.min.js"></script>
+<script type="text/javascript" src="app/start.js"></script>
+<!-- util.js is a preloader -->
+<script type="text/javascript" src="app/util/util.js?v=1439103585324"></script>
+
+<script type="text/javascript">
+    $(start);
+</script>
+
+</body>
+</html>

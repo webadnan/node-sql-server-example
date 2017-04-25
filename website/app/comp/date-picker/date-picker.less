@@ -1,0 +1,75 @@
+.comp-date-picker {
+    font-size: 15px;
+    color: #000000;
+    line-height: 1em;
+
+    .comp-drop-down-list {
+        background-color: #fafafa;
+    }
+
+    .year-month {
+        margin-bottom: 5px;
+        background-color: rgb(238, 238, 238);
+
+        .previous, .next {
+            display: inline-block;
+            width: 15%;
+            text-align: center;
+            height: 37px;
+            padding-top: 12px;
+            margin-bottom: 3px;
+            cursor: pointer;
+            border-radius: 2px;
+        }
+
+        .previous:hover, .next:hover {
+            background-color: white;
+        }
+
+        .disabled {
+            pointer-events: none;
+            color: #BBB;
+        }
+
+        .text {
+            display: inline-block;
+            width: 65%;
+            height: 40px;
+            padding-top: 15px;
+        }
+    }
+
+    .week, .days {
+        display: table;
+        table-layout: fixed;
+        width: 100%;
+    }
+
+    .cell {
+        float: left;
+        display: table-cell;
+        width: 14.2857%;
+        height: 25px;
+        vertical-align: middle;
+        padding-top: 7px;
+        border-radius: 50%;
+    }
+
+    .hover:hover {
+        background-color: rgb(238, 238, 238);
+        cursor: pointer;
+    }
+
+    .disabled {
+        color: #ddd;
+        pointer-events: none;
+    }
+
+    .today {
+        color: red;
+    }
+
+    .days {
+        padding-bottom: 5px;
+    }
+}

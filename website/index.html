@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="UTF-8">
+    <META HTTP-EQUIV="Pragma" CONTENT="no-cache">
+
+    <title>PMS</title>
+    <link rel="stylesheet" type="text/css" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="bower_components/Font-Awesome/css/font-awesome.min.css">
+    <!--<link href='https://fonts.googleapis.com/css?family=Roboto:300,700,400' rel='stylesheet' type='text/css'>-->
+    <!--<link href='https://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>-->
+    <!--<link href='https://fonts.googleapis.com/css?family=Hind+Siliguri:400,600&subset=bengali,latin' rel='stylesheet' type='text/css'>-->
+    <link rel="stylesheet" type="text/css" href="build-dev/css/styles.css?v=1443631357781">
+    <link rel="icon" type="image/png" href="favicon.png">
+    <!--<link rel="icon" type="image/png" href="website/assets/images/pms-16x16.png">-->
+    <script type="text/javascript">
+        var _UUID_ = +'1443631357781';
+
+        function loadCss(url) {
+            var link = document.createElement("link");
+            link.type = "text/css";
+            link.rel = "stylesheet";
+            link.href = url;
+            document.getElementsByTagName("head")[0].appendChild(link);
+        }
+    </script>
+</head>
+
+<body>
+
+<div class="angular-view" ng-view></div>
+<input type="text" class="floating-text"/>
+<div class="drop-down-cont"></div>
+<div class="footer">
+    <div class="logic-bd-icon" ng-show="false">
+        <div class="icon-logic-BD_dots"></div>
+        <div class="icon-logic-BD_logic"></div>
+        <div class="icon-logic-BD_bd"></div>
+    </div>
+</div>
+
+
+<script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="bower_components/angular/angular.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-route/angular-route.min.js"></script>
+<script type="text/javascript" src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap.min.js"></script>
+<script type="text/javascript" src="bower_components/angular-bootstrap/ui-bootstrap-tpls.min.js"></script>
+<script type="text/javascript" src="bower_components/lodash/lodash.min.js"></script>
+<script type="text/javascript" src="vendor/require.min.js"></script>
+<script type="text/javascript" src="build-dev/app/settings.js?v=1443631357781"></script>
+<script type="text/javascript" src="build-dev/app/util/util.js?v=1443631357781"></script>
+<script type="text/javascript" src="build-dev/app/start.js?v=1443631357781"></script>
+
+
+<!--DEV {-->
+<!--}-->
+
+<script type="text/javascript">
+    $(start);
+</script>
+
+
+</body>
+</html>

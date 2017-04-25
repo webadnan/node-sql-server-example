@@ -1,0 +1,32 @@
+body,html{font-family:Arial,sans-serif;font-size:14px;line-height:1.4em;height:100%}
+.btn,.btn:focus{outline:0!important}
+.glyphicon{top:2px}
+.modal.fade,.modal.fade .modal-dialog{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
+.modal-backdrop{height:500%}
+.modal-content{border-radius:6px}
+.modal-body{padding:20px 15px 5px}
+.modal-title{background-color:#ededed;border-top-left-radius:6px;border-top-right-radius:6px;padding:15px 15px 15px 25px;font-size:20px}
+.modal-footer{border:none;padding-top:0}
+.modal-backdrop.fade,.modal-backdrop.in{-webkit-transition:none;-moz-transition:none;-ms-transition:none;-o-transition:none;transition:none}
+.dialog-container-100{position:fixed;width:100%;height:100%;top:0;left:0;z-index:100;align-items:center;justify-content:center;display:none}
+.black-overlay{position:fixed;top:0;left:0;z-index:50;width:100%;height:100%;background-color:rgba(0,0,0,.6);display:none}
+.common-dialog-style{position:relative;background-color:#fff;border-radius:4px;padding:15px}
+.cross-button{display:flex;align-items:center;justify-content:center;width:30px;height:30px;position:absolute;top:0;left:calc(100% - 30px);opacity:.6;cursor:pointer;font-size:14px}
+.cross-button:hover{opacity:1}
+.input-text{border:1px solid #999;padding-left:5px;font-size:16px;border-radius:3px}
+.signature{width:100%}
+.signature td{width:calc(100% / 6);font-weight:700;text-align:center}
+.signature td .text{border-top:1px solid #000;width:110px;display:inline-block}
+.comp-select-section{min-width:400px;max-width:500px}
+.comp-select-section .content{max-height:300px;overflow-y:scroll}
+.comp-select-section .sections{width:100%}
+.comp-select-section .sections tr.header{font-weight:700}
+.comp-select-section .sections td{border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:10px}
+.comp-select-section .input-text{width:100%}
+.comp-common-dialog .content-gap,.comp-common-dialog .content-gap .content{padding-top:10px;padding-bottom:10px}
+.comp-selectable-list{width:100%}
+.comp-selectable-list tr.header{font-weight:700}
+.comp-selectable-list td{border-top:1px solid #e9e9e9;border-bottom:1px solid #e9e9e9;padding:10px;cursor:pointer}
+.comp-selectable-list .data .check{cursor:pointer}
+.comp-selectable-list tr.selected{background-color:#e9e9e9}
+.comp-selectable-list tr.selected td{border-top:1px solid #fff;border-bottom:1px solid #fff}

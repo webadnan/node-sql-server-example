@@ -1,0 +1,6 @@
+.comp-select-section{min-width:400px;max-width:500px}
+.comp-select-section .content{max-height:300px;overflow-y:scroll}
+.comp-select-section .sections{width:100%}
+.comp-select-section .sections tr.header{font-weight:700}
+.comp-select-section .sections td{border-top:1px solid #ccc;border-bottom:1px solid #ccc;padding:10px}
+.comp-select-section .input-text{width:100%}

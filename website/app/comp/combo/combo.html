@@ -1,0 +1,8 @@
+<div class="comp-combo" ng-show="data.length > 0">
+    <table class="pms-table combo-table">
+        <tr class="combo-table-row" index="{{$index}}" ng-repeat="e in data track by $index" ng-mouseover="mouseOver($event)">
+            <td class="pms-cd" ng-show="e.showCd">{{e.cd}}</td>
+            <td>{{e.display}}</td>
+        </tr>
+    </table>
+</div>

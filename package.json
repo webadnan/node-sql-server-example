@@ -1,0 +1,44 @@
+{
+  "name": "pms-server",
+  "version": "0.0.1",
+  "description": "Production Management System Next",
+  "main": "gulpfile.js",
+  "devDependencies": {
+    "babel": "^5.8.23",
+    "babel-core": "^5.8.23",
+    "body-parser": "^1.13.3",
+    "chalk": "^1.1.1",
+    "child-proc": "0.0.1",
+    "class.extend": "^0.9.1",
+    "connect-livereload": "^0.5.3",
+    "express": "^4.13.3",
+    "gulp": "^3.9.0",
+    "gulp-concat": "^2.6.0",
+    "gulp-jshint": "^1.11.2",
+    "gulp-less": "^3.0.3",
+    "gulp-minify-css": "^1.2.1",
+    "gulp-ng-annotate": "^1.1.0",
+    "gulp-uglifyjs": "^0.6.2",
+    "http-server": "^0.8.0",
+    "jshint-stylish": "^2.0.1",
+    "lodash": "^3.10.1",
+    "map-stream": "0.0.6",
+    "mssql": "^2.2.0",
+    "preprocessor": "^1.4.0",
+    "q": "^1.4.1",
+    "request": "^2.61.0",
+    "shelljs": "^0.5.3",
+    "through": "^2.3.8",
+    "tiny-lr": "^0.1.6",
+    "xml2js": "^0.4.11",
+    "yargs": "^3.24.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "BSD-2-Clause",
+  "repository": {
+    "private": true
+  }
+}

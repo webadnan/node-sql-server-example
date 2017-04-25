@@ -1,0 +1,13 @@
+{
+  "name": "DatePicker",
+  "homepage": "https://github.com/foxrunsoftware/DatePicker",
+  "_release": "cb50835c78",
+  "_resolution": {
+    "type": "branch",
+    "branch": "master",
+    "commit": "cb50835c781ff43c602b423bc919e1c349080884"
+  },
+  "_source": "https://github.com/foxrunsoftware/DatePicker.git",
+  "_target": "*",
+  "_originalSource": "https://github.com/foxrunsoftware/DatePicker.git"
+}

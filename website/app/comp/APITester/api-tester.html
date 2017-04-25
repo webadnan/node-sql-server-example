@@ -1,0 +1,23 @@
+<div class="comp-api-tester">
+    <table class="io-table">
+        <tr>
+            <td class="request">
+                Request (in JSON format):<br>
+                <!--<textarea ng-model="data.request" ng-change="onRequestChange()"></textarea>-->
+                <pre id="editor"></pre>
+            </td>
+            <td class="response">
+                Response (in JSON format):<br>
+                <textarea ng-model="data.response">
+
+                </textarea>
+            </td>
+        </tr>
+        <tr>
+            <td colspan="2" class="button-cont">
+                <input type="button" value="Batch" ng-click="onBatch()">
+                <input type="button" value="Clear" ng-click="onClear()">
+            </td>
+        </tr>
+    </table>
+</div>

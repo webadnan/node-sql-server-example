@@ -1,0 +1,24 @@
+{
+    "name": "my-project",
+    "version": "1.0.0",
+    "main": "path/to/main.css",
+    "ignore": [
+        ".jshintrc",
+        "**/*.txt"
+    ],
+    "dependencies": {},
+    "devDependencies": {
+        "DatePicker": "https://github.com/foxrunsoftware/DatePicker.git",
+        "angular": "angularjs#~1.4.5",
+        "angular-bootstrap": "~0.13.4",
+        "angular-route": "~1.4.5",
+        "bootstrap": "~3.3.5",
+        "font-awesome": "Font-Awesome#~4.4.0",
+        "jquery": "~2.1.4",
+        "lodash": "~3.10.1",
+        "require": "*"
+    },
+    "resolutions": {
+        "angular": "1.3.8"
+    }
+}

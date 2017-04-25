@@ -1,0 +1,44 @@
+<div class="prod-basic">
+    <pms-header>
+        <left><span class="icon-home glyphicon glyphicon-home" ng-click="Global.home()"></span><br></left>
+        <center>Production Basic Info</center>
+    </pms-header>
+
+    <div class="list-of-forms">
+        <h4 class="category">Category</h4>
+        <br><br>
+
+        <div ng-class="e.class" ng-repeat="e in data.forms" ng-click="setSelectedForm(e)">{{e.name || '&nbsp;'}}</div>
+    </div>
+
+    <div class="form">
+
+        <div class="form-header">
+            <h4 class="form-title">{{data.selectedForm.name}}</h4>
+
+            <div class="filter">
+                <search-text ng-model="data.filter"></search-text>
+            </div>
+        </div>
+
+        <div class="data-cont">
+            <table class="pms-table">
+                <tr class="pms-table-row" cd="{{e.cd}}" ng-repeat="e in data.items | filter:data.filter">
+                    <td class="pms-cd">{{e.cd}}</td>
+                    <td inline-edit="onEdit(event)" cd="{{e.cd}}">{{e.name}}</td>
+                    <td class="pms-menu-button-cont"><div class="pms-menu-button fa fa-ellipsis-v" ng-click="onMenu($event)"></div></td>
+                </tr>
+            </table>
+
+            <div class="add input-group">
+                <input type="text" class="form-control" placeholder="New {{data.selectedForm.name}}"
+                       ng-model="data.addText"
+                       ng-enter="add()" ng-esc="data.addText = ''"/>
+                <span class="input-group-btn">
+                    <button class="btn btn-default" type="button" ng-click="add()">Add</button>
+                </span>
+            </div>
+        </div>
+
+    </div>
+</div>

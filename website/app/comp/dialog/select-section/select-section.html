@@ -1,0 +1,12 @@
+<div class="comp-select-section" common-dialog close="close()" ng-esc="close()">
+    <header>
+        {{data.title}}<br>
+        <input type="text" class="input-text" placeholder="filter section" ng-model="data.filter" autofocus ng-enter="onEnter()">
+    </header>
+    <selectable-list data="data.sections" header="data.header" filter="data.filter" filtered-data="onFilter(data)"></selectable-list>
+
+    <footer>
+        <button ng-class="data.okButtonClass" ng-click="ok()">Select</button>
+        <button class="btn btn-default" ng-click="close()">Cancel</button>
+    </footer>
+</div>

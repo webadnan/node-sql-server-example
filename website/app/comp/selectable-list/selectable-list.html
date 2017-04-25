@@ -1,0 +1,20 @@
+<table class="comp-selectable-list">
+    <tr class="header">
+        <td class="check">
+            <input type="checkbox" ng-if="!allSelected" ng-click="selectAll(true)">
+            <input type="checkbox" ng-if="allSelected" checked ng-click="selectAll(false)">
+        </td>
+        <td ng-class="map.key" ng-repeat="map in header">
+            {{map.value}}
+        </td>
+    </tr>
+    <tr id="row-{{$index}}" ng-class="getDataClass($index)" ng-repeat="e in getData() track by $index" ng-click="toggle($index)">
+        <td class="check">
+            <input type="checkbox" ng-if="!e._selected">
+            <input type="checkbox" ng-if="e._selected" checked>
+        </td>
+        <td ng-class="map.key" ng-repeat="map in header">
+            {{e[map.key]}}
+        </td>
+    </tr>
+</table>

@@ -1,0 +1,13 @@
+<div class="comp-pms-menu">
+    <div class="pms-menu-item" ng-repeat="e in menuInfo.items" ng-click="onMenu($event)">
+        <div class="icon" ng-if="e.icon">
+            <span ng-class="e.icon"></span>
+        </div>
+        <div class="icon no-icon" ng-if="!e.icon">
+            <span class="fa fa-times"></span>
+        </div>
+        <div class="text">
+            {{e.value}}
+        </div>
+    </div>
+</div>

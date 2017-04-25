@@ -1,0 +1,227 @@
+<div class = "jumbotron">
+    <h1 align = "center">Production Management System</h1>
+</div>
+<div>
+    <h2>Complete Toolbar {{name}}</h2>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                        data-target="#bs-example-navbar-collapse-1">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <ul class="nav navbar-nav">
+                    <li class="active"><a href="#/lazy">Link <span class="sr-only">(current)</span></a></li>
+                    <li><a href="#/lazy">Link</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">One more separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+                <form class="navbar-form navbar-left" role="search">
+                    <div class="form-group">
+                        <input type="text" class="form-control" placeholder="Search" tooltip="Search Styles or Employee" ng-enter="console.log('enter')" ng-esc="onEsc()">
+                    </div>
+                    <button type="submit" class="btn btn-default" ng-click="showModal()">Submit</button>
+                </form>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="#/" ng-click="onAlert()">Alert</a></li>
+                    <li><a href="#/" ng-click="onConfirm()">Confirm</a></li>
+                    <li><a href="#/" ng-click="onPrompt()">Prompt</a></li>
+                    <li><a href="#/" ng-click="onMultiInput()">MultiInput</a></li>
+                    <li><a href="#/" ng-click="onAddress()">Address</a></li>
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown
+                            <span class="caret"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Action</a></li>
+                            <li><a href="#">Another action</a></li>
+                            <li><a href="#">Something else here</a></li>
+                            <li class="divider"></li>
+                            <li><a href="#">Separated link</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+</div>
+
+
+<div>
+    <h2>Button</h2>
+    <button type="button" class="btn btn-default">
+        <span class="fa fa-spinner fa-spin"></span> Star
+    </button>
+    <button type="button" class="btn btn-default">
+        <span class="fa fa-refresh fa-spin"></span> Star
+    </button>
+    <button class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Primary</button>
+    <button class="btn btn-success"><span class="glyphicon glyphicon-cog fa-spin"></span> Success</button>
+    <button class="btn btn-info"><span class="glyphicon glyphicon-file"></span> Info</button>
+    <button class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span> Warning</button>
+    <button class="btn btn-danger"><span class="glyphicon glyphicon-edit"></span> Danger</button>
+    <button class="btn btn-primary"><span class="glyphicon glyphicon-plus"></span> Add</button>
+    <button class="btn btn-success"><span class="glyphicon glyphicon-cog"></span> Settings</button>
+    <button class="btn btn-info"><span class="fa fa-file-text-o"></span> Report</button>
+    <button class="btn btn-warning"><span class="glyphicon glyphicon-remove"></span> Close/Delete</button>
+    <button class="btn btn-danger"><span class="glyphicon glyphicon-edit"></span> Edit</button>
+    <br><br>
+
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+    </div>
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default">Left</button>
+        <button type="button" class="btn btn-default">Middle</button>
+        <button type="button" class="btn btn-default">Right</button>
+    </div>
+</div>
+
+<div>
+    <h2>Dropdown Menu</h2>
+
+    <div class="dropdown">
+        <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown"
+                aria-expanded="true">
+            Dropdown
+            <span class="caret"></span>
+        </button>
+        <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Another action</a></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Something else here</a></li>
+            <li role="presentation" class="divider"></li>
+            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Separated link</a></li>
+        </ul>
+    </div>
+
+    <br>
+
+    <div class="btn-group" role="group" aria-label="...">
+        <button type="button" class="btn btn-default">Fixed</button>
+        <button type="button" class="btn btn-default">Production</button>
+
+        <div class="btn-group" role="group">
+            <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                Reports
+                <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Dropdown link</a></li>
+                <li><a href="#">Dropdown link</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<!--Total Worker Calculate -->
+<div ng-app="" ng-init="line=''; man=''; floor=''">
+    <h2>Worker Calculate</h2>
+    Line: <input type="number" ng-model="line">
+    Floor: <input type="number" ng-model="floor">
+    Man: <input type="number" ng-model="man">
+    <h3>Total Worker: {{line * man * floor}}</h3>
+</div>
+
+<div class="comp-input-group">
+    <h2>Input Group</h2>
+    Implement date picker from this nice site: http://stefangabos.ro/jquery/zebra-datepicker/#download
+    <div class="input-group">
+        <span class="input-group-addon" id="sizing-addon2">Name</span>
+        <input type="text" class="form-control" placeholder="Username" aria-describedby="sizing-addon2">
+    </div>
+    <br>
+
+    <form class="form-horizontal">
+        <div class="form-group">
+            <label for="inputEmail3" class="col-sm-2 control-label">Email</label>
+
+            <div class="col-sm-10">
+                <input type="email" class="form-control" id="inputEmail3" placeholder="Email">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="inputPassword3" class="col-sm-2 control-label">Password</label>
+
+            <div class="col-sm-10">
+                <input type="password" class="form-control" id="inputPassword3" placeholder="Password">
+            </div>
+        </div>
+        <div class="form-group">
+            <label for="selectCar01" class="col-sm-2 control-label">Select car</label>
+
+            <div class="col-sm-10">
+                <select class="form-control" id="selectCar01">
+                    <option value="volvo">Volvo</option>
+                    <option value="saab">Saab</option>
+                    <option value="mercedes">Mercedes</option>
+                    <option value="audi">Audi</option>
+                </select>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <div class="checkbox">
+                    <label>
+                        <input type="checkbox"> Remember me
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="form-group">
+            <div class="col-sm-offset-2 col-sm-10">
+                <button type="submit" class="btn btn-default">Sign in</button>
+            </div>
+        </div>
+    </form>
+</div>
+
+<div>
+    <h2>Tab View</h2>
+    <ul class="nav nav-tabs">
+        <li role="presentation" class="active"><a href="#">Home</a></li>
+        <li role="presentation"><a href="#">Profile</a></li>
+        <li role="presentation"><a href="#">Messages</a></li>
+    </ul>
+</div>
+
+<script type="text/ng-template" id="myModalContent.html">
+    <div class="modal-header">
+        <h3 class="modal-title">Im a modal!</h3>
+    </div>
+    <div class="modal-body">
+        <ul>
+            <li ng-repeat="item in items">
+                <a ng-click="selected.item = item">{{ item }}</a>
+            </li>
+        </ul>
+        Selected: <b>{{ selected.item }}</b>
+    </div>
+    <div class="modal-footer">
+        <button class="btn btn-primary" ng-click="ok()">OK</button>
+        <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+    </div>
+</script>

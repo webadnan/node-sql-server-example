@@ -1,0 +1,1 @@
+git status -s | grep -v 'node_modules\|.idea\|.DS_Store\|build-dev' | grep -v '.idea/workspace.xml' | grep -v 'connection-string.xml'

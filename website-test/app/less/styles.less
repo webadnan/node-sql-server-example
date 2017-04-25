@@ -1,0 +1,143 @@
+@header-bg-color: #ededed;
+@line-color: #ccc;
+@font-size-title: 20px;
+
+html, body {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    line-height: 1.4em;
+    height: 100%;
+}
+
+.btn, .btn:focus {
+    outline: none !important;
+}
+.glyphicon {
+    top: 2px;
+}
+.modal.fade, .modal.fade .modal-dialog {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+.modal-backdrop {
+    height: 500%;
+}
+
+.modal-content {
+    border-radius: 6px;
+}
+
+.modal-body {
+    padding: 20px 15px 5px 15px;
+}
+
+.modal-title {
+    background-color: @header-bg-color;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    padding: 15px 15px 15px 25px;
+    font-size: @font-size-title;
+}
+
+.modal-footer {
+    border: none;
+    padding-top: 0;
+}
+
+.modal-backdrop.fade, .modal-backdrop.in {
+    -webkit-transition: none;
+    -moz-transition: none;
+    -ms-transition: none;
+    -o-transition: none;
+    transition: none;
+}
+
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+    box-shadow: @shadow;
+}
+
+.flex-center-all() {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.dialog-container-100 {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    .flex-center-all();
+    display: none;
+}
+
+.black-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 50;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.6);
+    display: none;
+}
+
+.border(@c:#999999) {
+    border: 1px solid @c;
+}
+
+.common-dialog-style {
+    position: relative;
+    background-color: white;
+    border-radius: 4px;
+    padding: 15px;
+}
+
+.cross-button {
+    .flex-center-all();
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    top: 0;
+    left: calc(~'100% - ' 30px);
+    opacity: 0.6;
+    cursor: pointer;
+    font-size: 14px;
+    //.border();
+}
+
+.cross-button:hover {
+    opacity: 1;
+}
+
+.input-text {
+    .border();
+    padding-left: 5px;
+    font-size: 16px;
+    border-radius: 3px;
+}
+
+.signature {
+    width: 100%;
+    td {
+        width: calc(~'100% / ' 6);
+        font-weight: bold;
+        text-align: center;
+
+        .text {
+            border-top: 1px solid black;
+            width: 110px;
+            display: inline-block;
+        }
+    }
+}
+
+@import "../comp/dialog/select-section/select-section";
+@import "../comp/dialog/common-dialog/common-dialog";
+@import "../comp/selectable-list/selectable-list";

@@ -1,0 +1,237 @@
+@page-max-width: 980px;
+@header-height: 50px;
+@hover-color: rgb(238, 238, 238);
+
+@import "logic-bd-icon";
+@import "../controllers/home-controller/home-controller";
+@import "../controllers/prod-basic/prod-basic";
+@import "../controllers/prod-settings/prod-settings";
+@import "../controllers/book-controller/book-controller";
+@import "../comp/pms-header/pms-header";
+@import "../comp/search-text/search-text";
+@import "../comp/APITester/api-tester.less";
+@import "../comp/combo/combo";
+@import "../comp/date-picker/date-picker";
+@import "../comp/pms-menu/pms-menu";
+// @CODE_GENERATOR:LINK_LESS
+
+body {
+    font-family: Arial;
+    //font-family: Roboto;
+    //font-family: 'PT Sans Narrow';
+    //font-family: 'Hind Siliguri';
+    //font-weight: 300;
+    font-size: 14px;
+}
+
+.app {
+    position: relative;
+    width: @page-width;
+    .border(#EEEEEE);
+    .center-block();
+}
+
+.pms-spinner {
+    width: 100%;
+    height: 100px;
+    .flex-center();
+    color: #999 !important;
+}
+
+.footer {
+    width: 100%;
+    text-align: center;
+    margin: 100px 0;
+}
+
+.floating-text {
+    position: absolute;
+    display: none;
+    border: none;
+}
+
+.drop-down-cont {
+    position: absolute;
+    display: none;
+    z-index: 50;
+    background-color: white;
+    .box-shadow(0px 2px 4px rgba(0, 0, 0, .2));
+    .border(#ddd);
+}
+
+.angular-view {
+    position: relative;
+    width: 100%;
+    max-width: @page-max-width;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+}
+
+.pms-table {
+    width: 100%;
+
+    td {
+        padding: 5px;
+    }
+
+    .pms-table-header {
+        height: 40px;
+        background-color: rgba(238, 238, 238, 0.91);
+        border-bottom: 1px solid #dddddd;
+    }
+
+    .pms-table-row {
+        border-bottom: 1px solid #eee;
+        background-color: rgba(238, 238, 238, 0.2);
+    }
+
+    .pms-table-row:hover {
+        background-color: rgba(238, 238, 238, 0.7);
+    }
+}
+
+.pms-cd {
+    font-size: 9px;
+    color: #999;
+    width: 30px;
+}
+
+
+.pms-menu-button-cont {
+    text-align: right;
+    width: 20px;
+    //font-size: 16px;
+    color: #666;
+}
+
+.pms-menu-button {
+    width: 20px;
+    height: 20px;
+    background-color: #ddd;
+    .border(#ccc);
+    text-align: center;
+    cursor: pointer;
+    opacity: 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.pms-table-row:hover {
+    .pms-menu-button {
+        opacity: 1;
+    }
+}
+
+.pms-new-row {
+    color: #4193de;
+    //4193de
+}
+
+.pms-selected() {
+    border-color: rgba(46, 152, 255, 0.26);
+    background-color: rgba(46, 152, 255, 0.26);
+}
+
+// Common UI styles
+
+[type=text] {
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+
+// constants
+@page-width: 1024px;
+
+h2, h3, h4, h5, h6 {
+    margin: 0;
+    display: inline-block;
+}
+
+hr {
+    margin: 5px 0;
+}
+
+.wait:before {
+    content: url(../../assets/images/ajax-loader.gif)
+}
+
+.border(@color: gray) {
+    border: 1px solid @color;
+}
+
+.box-shadow(@shadow) {
+    -webkit-box-shadow: @shadow; // iOS <4.3 & Android <4.1
+    box-shadow: @shadow;
+}
+
+.center-block() {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.comp-styles {
+    color: blue;
+}
+
+.pms-link {
+    color: #0077CC;
+    cursor: pointer;
+
+    &:hover {
+        text-decoration: underline;
+    }
+}
+
+.pms-link-selected {
+    font-weight: bold;
+    color: #000c95;
+}
+
+.flex-h-center() {
+    display: flex;
+    justify-content: center;
+}
+
+.flex-v-center() {
+    display: flex;
+    align-items: center;
+}
+
+.flex-center() {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+// icons
+.icon-home {
+    height: @header-height;
+    cursor: pointer;
+    color: gray;
+    .flex-center();
+
+
+    &:hover {
+        color: black;
+    }
+}
+
+.icon-search {
+    color: #CCC;
+}
+
+.unselectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+.ng-placeholder {
+    color: #999;
+}
